@@ -1,0 +1,28 @@
+
+<div class="container-fluid header">
+  <h1>
+  Best books ever!
+  </h1>
+</div>
+
+<div class="sort">
+      <p> Sort by: <p>
+      <button type="button" class="btn btn-danger" (click)="ratingSort()">Top rated</button>
+      <button type="button" class="btn btn-danger" (click)="rSort()">Worst rated</button>
+
+</div>
+
+
+<div class= "padding" style="text-align:center">
+
+
+  <div class="portada" *ngFor="let data of dataset?.slice(0,32)" >
+    <a [routerLink]='["/details",data.id]' routerLinkActive="active">
+        <img class="imgs" src= "{{data.image}}"></a>
+      <div class="container">
+        <p> <span class="title">{{data.title}}</span> <br><i class="fa fa-star" aria-hidden="true"></i>{{data.average_rating}}</p>
+
+      </div>
+
+  </div>
+</div>

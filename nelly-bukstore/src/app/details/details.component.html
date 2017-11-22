@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="back col-10 text-center">
+    <!--  <button type="button" class="btn btn-outline-info" (click)="goHome()">back</button>-->
+    </div>
+    <div class="col-md-4 col-sm-12 text-right">
+      <img class="img-fluid" src="{{data.image}}">
+    </div>
+    <div class="info col-md-4 col-sm-12">
+      <h2>{{data?.title}}</h2>
+      <p>{{data?.authors}}</p>
+      <p>{{data?.original_publication_year/1}}</p>
+      <p>ISBN: {{data?.isbn}}</p>
+      <p>ISBN-13: {{data?.isbn13/1}}</p>
+      <p>rating: {{data?.average_rating}}    <i class="fa fa-star" aria-hidden="true"></i></p>
+
+    </div>
+  </div>
+</div>
